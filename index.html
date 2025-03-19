@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentimate - Idea to design in seconds</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="lib/anime.min.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">❤️ agentimate</div>
+        <div class="nav-links">
+            <a href="#learn">Learn</a>
+            <div class="auth-buttons">
+                <button class="sign-in">Sign in</button>
+                <button class="sign-up">Sign up</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="hero">
+            <div class="animated-logo">
+                <div class="circle"></div>
+                <div class="square"></div>
+                <div class="triangle"></div>
+            </div>
+            <h1>Idea to design in seconds.</h1>
+            <p class="subtitle">Agentimate is your superhuman AI design assistant.</p>
+            
+            <div class="prompt-box">
+                <input type="text" placeholder="Ask Agentimate to create a design...">
+                <button class="magic-button">
+                    <span class="magic-icon">✨</span>
+                    <span>Create</span>
+                </button>
+            </div>
+
+            <!-- Animation Gallery -->
+            <div class="animation-gallery">
+                <div class="gallery-header">
+                    <h3>Interactive Animations</h3>
+                    <div class="gallery-controls">
+                        <input type="text" id="demoText" placeholder="Type text to preview..." value="Hover Me">
+                    </div>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="animation-card" data-type="floatEffect">
+                        <div class="card-preview">
+                            <div class="preview-text"></div>
+                            <div class="floating-shapes">
+                                <div class="shape-dot"></div>
+                                <div class="shape-dot"></div>
+                                <div class="shape-dot"></div>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <h4>Floating Effect</h4>
+                        </div>
+                    </div>
+
+                    <div class="animation-card" data-type="magneticPull">
+                        <div class="card-preview">
+                            <div class="preview-text"></div>
+                            <div class="magnetic-field"></div>
+                        </div>
+                        <div class="card-info">
+                            <h4>Magnetic Pull</h4>
+                        </div>
+                    </div>
+
+                    <div class="animation-card" data-type="particleField">
+                        <div class="card-preview">
+                            <div class="preview-text"></div>
+                            <div class="particles"></div>
+                        </div>
+                        <div class="card-info">
+                            <h4>Particle Field</h4>
+                        </div>
+                    </div>
+
+                    <div class="animation-card" data-type="rippleEffect">
+                        <div class="card-preview">
+                            <div class="preview-text"></div>
+                            <div class="ripple-container"></div>
+                        </div>
+                        <div class="card-info">
+                            <h4>Ripple Effect</h4>
+                        </div>
+                    </div>
+
+                    <div class="animation-card" data-type="morphing">
+                        <div class="card-preview">
+                            <div class="preview-text"></div>
+                            <div class="morph-shape"></div>
+                        </div>
+                        <div class="card-info">
+                            <h4>Shape Morph</h4>
+                        </div>
+                    </div>
+
+                    <div class="animation-card" data-type="gravitateOrbit">
+                        <div class="card-preview">
+                            <div class="preview-text"></div>
+                            <div class="orbit-system">
+                                <div class="orbit-dot"></div>
+                                <div class="orbit-dot"></div>
+                                <div class="orbit-dot"></div>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <h4>Gravitate & Orbit</h4>
+                        </div>
+                    </div>
+
+                    <!-- Additional Animation Cards -->
+                    <div class="animation-card" data-type="wavyText">
+                        <div class="card-preview">
+                            <div class="preview-text wavy-text"></div>
+                        </div>
+                        <div class="card-info">
+                            <h4>Wavy Text</h4>
+                        </div>
+                    </div>
+
+                    <div class="animation-card" data-type="glowPulse">
+                        <div class="card-preview">
+                            <div class="preview-text"></div>
+                            <div class="glow-container"></div>
+                        </div>
+                        <div class="card-info">
+                            <h4>Glow Pulse</h4>
+                        </div>
+                    </div>
+
+                    <div class="animation-card" data-type="neonTrail">
+                        <div class="card-preview">
+                            <div class="preview-text"></div>
+                            <div class="neon-trail"></div>
+                        </div>
+                        <div class="card-info">
+                            <h4>Neon Trail</h4>
+                        </div>
+                    </div>
+
+                    <div class="animation-card" data-type="liquidBubble">
+                        <div class="card-preview">
+                            <div class="preview-text"></div>
+                            <div class="liquid-bubble"></div>
+                        </div>
+                        <div class="card-info">
+                            <h4>Liquid Bubble</h4>
+                        </div>
+                    </div>
+
+                    <div class="animation-card" data-type="magneticGrid">
+                        <div class="card-preview">
+                            <div class="preview-text"></div>
+                            <div class="magnetic-grid"></div>
+                        </div>
+                        <div class="card-info">
+                            <h4>Magnetic Grid</h4>
+                        </div>
+                    </div>
+
+                    <div class="animation-card" data-type="energyField">
+                        <div class="card-preview">
+                            <div class="preview-text"></div>
+                            <div class="energy-field"></div>
+                        </div>
+                        <div class="card-info">
+                            <h4>Energy Field</h4>
+                        </div>
+                    </div>
+
+                    <div class="animation-card" data-type="colorShift">
+                        <div class="card-preview">
+                            <div class="preview-text"></div>
+                            <div class="color-shift-bg"></div>
+                        </div>
+                        <div class="card-info">
+                            <h4>Color Shift</h4>
+                        </div>
+                    </div>
+
+                    <div class="animation-card" data-type="textSplit">
+                        <div class="card-preview">
+                            <div class="preview-text split-text"></div>
+                        </div>
+                        <div class="card-info">
+                            <h4>Text Split</h4>
+                        </div>
+                    </div>
+
+                    <div class="animation-card" data-type="pixelate">
+                        <div class="card-preview">
+                            <div class="preview-text"></div>
+                            <div class="pixel-grid"></div>
+                        </div>
+                        <div class="card-info">
+                            <h4>Pixelate</h4>
+                        </div>
+                    </div>
+
+                    <div class="animation-card" data-type="soundWave">
+                        <div class="card-preview">
+                            <div class="preview-text"></div>
+                            <div class="wave-container"></div>
+                        </div>
+                        <div class="card-info">
+                            <h4>Sound Wave</h4>
+                        </div>
+                    </div>
+
+                    <div class="animation-card" data-type="glitchText">
+                        <div class="card-preview">
+                            <div class="preview-text glitch-text"></div>
+                        </div>
+                        <div class="card-info">
+                            <h4>Glitch Text</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <div class="testimonials-section">
+            <h2>What our users say</h2>
+            <div class="testimonials-grid">
+                <!-- Row 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar" style="background: linear-gradient(45deg, #FF6B6B, #FFE66D)">JD</div>
+                    <p class="testimonial-text">"Agentimate transformed how I create designs. The animations are incredibly smooth and the AI understands exactly what I need."</p>
+                    <div class="testimonial-author">John Doe, UI Designer</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar" style="background: linear-gradient(45deg, #4ECDC4, #556270)">SA</div>
+                    <p class="testimonial-text">"The interactive animations have brought life to my projects. My clients are consistently impressed with the results."</p>
+                    <div class="testimonial-author">Sarah Adams, Creative Director</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar" style="background: linear-gradient(45deg, #FF8C42, #FF3C38)">MK</div>
+                    <p class="testimonial-text">"I've never seen AI-driven design tools this intuitive. The motion effects are simply outstanding."</p>
+                    <div class="testimonial-author">Mike Kim, Product Designer</div>
+                </div>
+                <!-- Row 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar" style="background: linear-gradient(45deg, #A8E6CF, #DCEDC1)">EJ</div>
+                    <p class="testimonial-text">"The particle effects and morphing animations have become a signature part of my design language. Thank you, Agentimate!"</p>
+                    <div class="testimonial-author">Emma Johnson, Web Developer</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar" style="background: linear-gradient(45deg, #3F72AF, #DBE2EF)">RL</div>
+                    <p class="testimonial-text">"From concept to execution, Agentimate has streamlined my entire design workflow. The interactive previews are a game-changer."</p>
+                    <div class="testimonial-author">Robert Lee, UX Designer</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar" style="background: linear-gradient(45deg, #FF9A8B, #FF6A88)">AP</div>
+                    <p class="testimonial-text">"The magnetic pull effect has become my go-to animation. It's subtle yet engaging, perfect for modern web design."</p>
+                    <div class="testimonial-author">Alice Parker, Frontend Developer</div>
+                </div>
+                <!-- Row 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar" style="background: linear-gradient(45deg, #845EC2, #D65DB1)">TW</div>
+                    <p class="testimonial-text">"I love how easy it is to preview different animation styles. The floating effects add such a professional touch to my designs."</p>
+                    <div class="testimonial-author">Tom Wilson, Interaction Designer</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar" style="background: linear-gradient(45deg, #008F7A, #4B4453)">CH</div>
+                    <p class="testimonial-text">"The ripple effects are mesmerizing. My clients always ask how I create such smooth animations - Agentimate is my secret weapon!"</p>
+                    <div class="testimonial-author">Claire Hughes, Digital Artist</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar" style="background: linear-gradient(45deg, #FFC75F, #FF9671)">BM</div>
+                    <p class="testimonial-text">"As a motion designer, I appreciate the attention to detail in each animation. The orbit effect is particularly impressive."</p>
+                    <div class="testimonial-author">Ben Martinez, Motion Designer</div>
+                </div>
+                <!-- Row 4 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar" style="background: linear-gradient(45deg, #B39CD0, #FBEAFF)">LR</div>
+                    <p class="testimonial-text">"The particle field animation has become an essential part of my interactive designs. It's both beautiful and functional."</p>
+                    <div class="testimonial-author">Lucy Rodriguez, UI/UX Designer</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar" style="background: linear-gradient(45deg, #00B8A9, #F8F3D4)">DK</div>
+                    <p class="testimonial-text">"I use Agentimate daily for creating micro-interactions. The floating effect animations are perfect for subtle feedback."</p>
+                    <div class="testimonial-author">David Kim, Interaction Designer</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar" style="background: linear-gradient(45deg, #F6416C, #FFDE7D)">MP</div>
+                    <p class="testimonial-text">"The ease of implementing complex animations has dramatically improved my workflow. Agentimate is a must-have tool."</p>
+                    <div class="testimonial-author">Maria Patel, Web Designer</div>
+                </div>
+                <!-- Row 5 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar" style="background: linear-gradient(45deg, #00B8A9, #F8F3D4)">JW</div>
+                    <p class="testimonial-text">"As a freelancer, Agentimate has helped me deliver professional animations quickly. The results always impress my clients."</p>
+                    <div class="testimonial-author">James Wilson, Freelance Developer</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar" style="background: linear-gradient(45deg, #FF8066, #FFD700)">KL</div>
+                    <p class="testimonial-text">"The morphing animations are incredibly smooth. I use them for loading states and transitions throughout my apps."</p>
+                    <div class="testimonial-author">Karen Liu, App Developer</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar" style="background: linear-gradient(45deg, #6C5B7B, #C06C84)">RB</div>
+                    <p class="testimonial-text">"The orbit animation system is genius. It's perfect for creating engaging hover states and interactive elements."</p>
+                    <div class="testimonial-author">Ryan Brown, Frontend Engineer</div>
+                </div>
+                <!-- Row 6 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar" style="background: linear-gradient(45deg, #2F5D62, #A7C4BC)">NH</div>
+                    <p class="testimonial-text">"Agentimate's animation library has everything I need. The magnetic pull effect is particularly impressive."</p>
+                    <div class="testimonial-author">Nina Harris, Digital Designer</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar" style="background: linear-gradient(45deg, #FF9A8B, #FF6A88)">CS</div>
+                    <p class="testimonial-text">"The ripple animations add such a professional touch to my projects. They're smooth and performant."</p>
+                    <div class="testimonial-author">Chris Smith, UX Engineer</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar" style="background: linear-gradient(45deg, #A8E6CF, #DCEDC1)">VM</div>
+                    <p class="testimonial-text">"I love how easy it is to customize the animations. The floating shapes are my personal favorite."</p>
+                    <div class="testimonial-author">Victoria Martinez, Web Developer</div>
+                </div>
+                <!-- Row 7 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar" style="background: linear-gradient(45deg, #3F72AF, #DBE2EF)">AK</div>
+                    <p class="testimonial-text">"The particle system is incredibly versatile. I use it for everything from backgrounds to interactive elements."</p>
+                    <div class="testimonial-author">Alex Kumar, Creative Technologist</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar" style="background: linear-gradient(45deg, #FF6B6B, #FFE66D)">SL</div>
+                    <p class="testimonial-text">"Agentimate has revolutionized how I approach motion design. The animations are both beautiful and functional."</p>
+                    <div class="testimonial-author">Sophie Lee, Motion Designer</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <p>Describe what you want to design in natural language</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <p>Agentimate creates your first design instantly</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <p>Talk to the AI to refine and perfect your design</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <p>Export your design in any format you need</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Logo animation
+        anime({
+            targets: '.animated-logo .circle',
+            scale: [0, 1],
+            opacity: [0, 1],
+            easing: 'easeOutExpo',
+            duration: 1000
+        });
+
+        anime({
+            targets: '.animated-logo .square',
+            translateX: [-50, 0],
+            opacity: [0, 1],
+            easing: 'easeOutExpo',
+            delay: 200,
+            duration: 1000
+        });
+
+        anime({
+            targets: '.animated-logo .triangle',
+            translateY: [50, 0],
+            opacity: [0, 1],
+            easing: 'easeOutExpo',
+            delay: 400,
+            duration: 1000
+        });
+
+        // Interactive Animation Functions
+        const animations = {
+            floatEffect: (card) => {
+                const dots = card.querySelectorAll('.shape-dot');
+                const container = card.querySelector('.floating-shapes');
+                
+                // Create dots if they don't exist
+                if (dots.length === 0) {
+                    for (let i = 0; i < 3; i++) {
+                        const dot = document.createElement('div');
+                        dot.className = 'shape-dot';
+                        container.appendChild(dot);
+                    }
+                }
+
+                card.querySelectorAll('.shape-dot').forEach((dot, i) => {
+                    const delay = i * 200;
+                    anime({
+                        targets: dot,
+                        translateX: () => anime.random(-30, 30),
+                        translateY: () => anime.random(-30, 30),
+                        scale: [0.5, 1.2],
+                        opacity: [0.3, 0.8],
+                        duration: 3000,
+                        delay: delay,
+                        loop: true,
+                        direction: 'alternate',
+                        easing: 'easeInOutSine'
+                    });
+                });
+            },
+            
+            magneticPull: (card) => {
+                const text = card.querySelector('.preview-text');
+                const field = card.querySelector('.magnetic-field');
+                let animation;
+
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const deltaX = (x - centerX) / centerX;
+                    const deltaY = (y - centerY) / centerY;
+
+                    if (animation) animation.pause();
+                    animation = anime({
+                        targets: text,
+                        translateX: deltaX * 30,
+                        translateY: deltaY * 30,
+                        duration: 400,
+                        easing: 'easeOutElastic(1.5, 0.3)'
+                    });
+
+                    field.style.background = `radial-gradient(circle at ${x}px ${y}px, 
+                        rgba(255, 51, 102, 0.2) 0%, 
+                        transparent 50%
+                    )`;
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    if (animation) animation.pause();
+                    animation = anime({
+                        targets: text,
+                        translateX: 0,
+                        translateY: 0,
+                        duration: 800,
+                        easing: 'easeOutElastic(1.5, 0.3)'
+                    });
+                    field.style.background = 'none';
+                });
+            },
+
+            particleField: (card) => {
+                const container = card.querySelector('.particles');
+                const particleCount = 15;
+                
+                // Create particles if they don't exist
+                if (container.children.length === 0) {
+                    for (let i = 0; i < particleCount; i++) {
+                        const particle = document.createElement('div');
+                        particle.className = 'particle';
+                        container.appendChild(particle);
+                    }
+                }
+
+                anime({
+                    targets: container.children,
+                    translateX: () => anime.random(-50, 50),
+                    translateY: () => anime.random(-50, 50),
+                    scale: () => anime.random(0.2, 1),
+                    opacity: () => anime.random(0.2, 0.8),
+                    duration: () => anime.random(1000, 3000),
+                    delay: anime.stagger(100),
+                    loop: true,
+                    direction: 'alternate',
+                    easing: 'easeInOutSine'
+                });
+
+                let moveAnimation;
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    if (moveAnimation) moveAnimation.pause();
+                    moveAnimation = anime({
+                        targets: container.children,
+                        translateX: (el, i) => {
+                            const center = rect.width / 2;
+                            return (x - center) * 0.1 * (i % 3 - 1);
+                        },
+                        translateY: (el, i) => {
+                            const center = rect.height / 2;
+                            return (y - center) * 0.1 * (i % 3 - 1);
+                        },
+                        duration: 300,
+                        easing: 'easeOutQuad'
+                    });
+                });
+            },
+
+            rippleEffect: (card) => {
+                const container = card.querySelector('.ripple-container');
+                let isAnimating = false;
+
+                card.addEventListener('mousemove', (e) => {
+                    if (isAnimating) return;
+                    isAnimating = true;
+
+                    const ripple = document.createElement('div');
+                    ripple.className = 'ripple';
+                    container.appendChild(ripple);
+
+                    const rect = card.getBoundingClientRect();
+                    ripple.style.left = (e.clientX - rect.left) + 'px';
+                    ripple.style.top = (e.clientY - rect.top) + 'px';
+
+                    anime({
+                        targets: ripple,
+                        scale: [0, 3],
+                        opacity: [0.8, 0],
+                        duration: 1000,
+                        easing: 'easeOutExpo',
+                        complete: () => {
+                            container.removeChild(ripple);
+                            isAnimating = false;
+                        }
+                    });
+                });
+            },
+
+            morphing: (card) => {
+                const shape = card.querySelector('.morph-shape');
+                let isCircle = false;
+
+                // Initial rotation animation
+                anime({
+                    targets: shape,
+                    rotate: 360,
+                    duration: 8000,
+                    loop: true,
+                    easing: 'linear'
+                });
+
+                card.addEventListener('mouseenter', () => {
+                    anime({
+                        targets: shape,
+                        borderRadius: isCircle ? '0%' : '50%',
+                        scale: 1.2,
+                        duration: 800,
+                        easing: 'easeOutElastic(1, 0.5)'
+                    });
+                    isCircle = !isCircle;
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    anime({
+                        targets: shape,
+                        scale: 1,
+                        duration: 600,
+                        easing: 'easeOutElastic(1, 0.5)'
+                    });
+                });
+            },
+
+            gravitateOrbit: (card) => {
+                const system = card.querySelector('.orbit-system');
+                const dots = card.querySelectorAll('.orbit-dot');
+                
+                // Create dots if they don't exist
+                if (dots.length === 0) {
+                    for (let i = 0; i < 3; i++) {
+                        const dot = document.createElement('div');
+                        dot.className = 'orbit-dot';
+                        system.appendChild(dot);
+                    }
+                }
+
+                const orbitDots = card.querySelectorAll('.orbit-dot');
+                orbitDots.forEach((dot, i) => {
+                    const angle = (i * 2 * Math.PI) / orbitDots.length;
+                    const radius = 40;
+                    
+                    anime({
+                        targets: dot,
+                        translateX: [
+                            { value: Math.cos(angle) * radius, duration: 0 },
+                            { value: Math.cos(angle + 2 * Math.PI) * radius, duration: 4000 }
+                        ],
+                        translateY: [
+                            { value: Math.sin(angle) * radius, duration: 0 },
+                            { value: Math.sin(angle + 2 * Math.PI) * radius, duration: 4000 }
+                        ],
+                        scale: [0.8, 1.2],
+                        opacity: [0.6, 1],
+                        loop: true,
+                        easing: 'linear'
+                    });
+                });
+
+                let moveAnimation;
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left - rect.width / 2;
+                    const y = e.clientY - rect.top - rect.height / 2;
+
+                    if (moveAnimation) moveAnimation.pause();
+                    moveAnimation = anime({
+                        targets: system,
+                        translateX: x * 0.2,
+                        translateY: y * 0.2,
+                        duration: 300,
+                        easing: 'easeOutQuad'
+                    });
+                });
+            },
+
+            wavyText: (card) => {
+                const text = card.querySelector('.wavy-text');
+                const letters = text.textContent.split('');
+                text.innerHTML = letters.map(letter => 
+                    `<span class="letter">${letter}</span>`
+                ).join('');
+
+                anime({
+                    targets: card.querySelectorAll('.letter'),
+                    translateY: [-3, 3],
+                    delay: anime.stagger(100, {from: 'center'}),
+                    duration: 1000,
+                    loop: true,
+                    direction: 'alternate',
+                    easing: 'easeInOutSine'
+                });
+            },
+
+            glowPulse: (card) => {
+                const container = card.querySelector('.glow-container');
+                
+                anime({
+                    targets: container,
+                    opacity: [0, 0.6],
+                    scale: [0.8, 1.2],
+                    duration: 1500,
+                    loop: true,
+                    direction: 'alternate',
+                    easing: 'easeInOutSine'
+                });
+
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    container.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(var(--gradient-start-rgb), 0.3) 0%, transparent 70%)`;
+                });
+            },
+
+            neonTrail: (card) => {
+                const trail = card.querySelector('.neon-trail');
+                let trailTimeout;
+
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+
+                    clearTimeout(trailTimeout);
+                    trail.style.opacity = '1';
+                    trail.style.left = x + 'px';
+                    trail.style.top = y + 'px';
+
+                    trailTimeout = setTimeout(() => {
+                        trail.style.opacity = '0';
+                    }, 100);
+                });
+            },
+
+            liquidBubble: (card) => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const bubble = card.querySelector('.liquid-bubble');
+                    
+                    bubble.style.background = `radial-gradient(circle at ${x}px ${y}px, var(--gradient-start) 0%, transparent 70%)`;
+                });
+            },
+
+            magneticGrid: (card) => {
+                const grid = card.querySelector('.magnetic-grid');
+                const cellCount = 16;
+                
+                for (let i = 0; i < cellCount; i++) {
+                    const cell = document.createElement('div');
+                    cell.className = 'grid-cell';
+                    grid.appendChild(cell);
+                }
+
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    grid.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+                    grid.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+                });
+            },
+
+            energyField: (card) => {
+                const field = card.querySelector('.energy-field');
+                
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const angleRad = Math.atan2(y - rect.height/2, x - rect.width/2);
+                    const angleDeg = (angleRad * 180 / Math.PI) + 90;
+                    
+                    field.style.background = `linear-gradient(${angleDeg}deg, 
+                        transparent 0%, 
+                        rgba(var(--gradient-start-rgb), 0.2) 25%, 
+                        rgba(var(--gradient-end-rgb), 0.2) 75%, 
+                        transparent 100%
+                    )`;
+                });
+            },
+
+            colorShift: (card) => {
+                const bg = card.querySelector('.color-shift-bg');
+                
+                anime({
+                    targets: bg,
+                    background: [
+                        { value: 'rgba(255, 51, 102, 0.2)' },
+                        { value: 'rgba(255, 153, 51, 0.2)' },
+                        { value: 'rgba(51, 255, 153, 0.2)' }
+                    ],
+                    duration: 3000,
+                    loop: true,
+                    direction: 'alternate',
+                    easing: 'easeInOutSine'
+                });
+
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = (e.clientX - rect.left) / rect.width;
+                    const hue = x * 360;
+                    bg.style.background = `hsla(${hue}, 70%, 50%, 0.2)`;
+                });
+            },
+
+            textSplit: (card) => {
+                const text = card.querySelector('.split-text');
+                let isAnimating = false;
+
+                card.addEventListener('mouseenter', () => {
+                    if (isAnimating) return;
+                    isAnimating = true;
+
+                    const letters = text.textContent.split('');
+                    text.innerHTML = letters.map(letter => 
+                        `<span class="split-letter">${letter}</span>`
+                    ).join('');
+
+                    anime.timeline({
+                        complete: () => isAnimating = false
+                    })
+                    .add({
+                        targets: card.querySelectorAll('.split-letter'),
+                        translateY: [-30, 0],
+                        opacity: [0, 1],
+                        delay: anime.stagger(50),
+                        duration: 800,
+                        easing: 'easeOutElastic(1, .5)'
+                    });
+                });
+            },
+
+            pixelate: (card) => {
+                const grid = card.querySelector('.pixel-grid');
+                const size = 10;
+                const cols = 15;
+                const rows = 15;
+
+                for (let i = 0; i < rows * cols; i++) {
+                    const pixel = document.createElement('div');
+                    pixel.className = 'pixel';
+                    grid.appendChild(pixel);
+                }
+
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+
+                    grid.querySelectorAll('.pixel').forEach((pixel, i) => {
+                        const pixelX = (i % cols) * size;
+                        const pixelY = Math.floor(i / cols) * size;
+                        const distance = Math.sqrt(
+                            Math.pow(x - pixelX, 2) + 
+                            Math.pow(y - pixelY, 2)
+                        );
+                        const scale = Math.max(0, 1 - distance / 100);
+                        pixel.style.transform = `scale(${scale})`;
+                        pixel.style.opacity = scale;
+                    });
+                });
+            },
+
+            soundWave: (card) => {
+                const container = card.querySelector('.wave-container');
+                const barCount = 20;
+
+                for (let i = 0; i < barCount; i++) {
+                    const bar = document.createElement('div');
+                    bar.className = 'wave-bar';
+                    container.appendChild(bar);
+                }
+
+                const bars = container.querySelectorAll('.wave-bar');
+                anime({
+                    targets: bars,
+                    height: () => anime.random(20, 100) + '%',
+                    duration: 600,
+                    loop: true,
+                    direction: 'alternate',
+                    delay: anime.stagger(100),
+                    easing: 'easeInOutSine'
+                });
+
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const centerX = rect.width / 2;
+                    const distance = Math.abs(x - centerX);
+                    
+                    bars.forEach((bar, i) => {
+                        const barCenter = (i / barCount) * rect.width;
+                        const barDistance = Math.abs(x - barCenter);
+                        const scale = Math.max(0.2, 1 - barDistance / rect.width);
+                        bar.style.transform = `scaleY(${scale})`;
+                    });
+                });
+            },
+
+            glitchText: (card) => {
+                const text = card.querySelector('.glitch-text');
+                let glitchInterval;
+
+                const glitchText = () => {
+                    const original = text.textContent;
+                    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                    let iterations = 0;
+
+                    clearInterval(glitchInterval);
+
+                    glitchInterval = setInterval(() => {
+                        text.textContent = original
+                            .split('')
+                            .map((char, index) => {
+                                if (index < iterations) return char;
+                                return chars[Math.floor(Math.random() * chars.length)];
+                            })
+                            .join('');
+
+                        iterations += 1/3;
+
+                        if (iterations >= original.length) {
+                            text.textContent = original;
+                            clearInterval(glitchInterval);
+                        }
+                    }, 30);
+                };
+
+                card.addEventListener('mouseenter', glitchText);
+            }
+        };
+
+        // Initialize gallery
+        function initGallery() {
+            const cards = document.querySelectorAll('.animation-card');
+            const demoText = document.getElementById('demoText');
+
+            function updateAllPreviews() {
+                cards.forEach(card => {
+                    const preview = card.querySelector('.preview-text');
+                    if (preview) {
+                        preview.textContent = demoText.value || 'Hover Me';
+                    }
+                });
+            }
+
+            cards.forEach(card => {
+                const type = card.dataset.type;
+                if (animations[type]) {
+                    animations[type](card);
+                }
+            });
+
+            demoText.addEventListener('input', updateAllPreviews);
+            updateAllPreviews();
+        }
+
+        document.addEventListener('DOMContentLoaded', initGallery);
+    </script>
+</body>
+</html> 
